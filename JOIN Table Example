@@ -1,0 +1,49 @@
+# SQL query to identify the top 10 countries with the highest number of Rockbuster customers.
+
+SELECT
+        D.country_id,
+        D.country
+    FROM customer A
+    JOIN address B ON A.address_id = B.address_id
+    JOIN city C ON B.city_id = C.city_id
+    JOIN country D ON C.country_id = D.country_id
+    GROUP BY D.country_id, D.country
+    ORDER BY COUNT(A.customer_id) DESC
+    LIMIT 10
+);
+
+# SQL query to identify top 10 cities falls in the category of step 1
+
+SELECT D.country,
+C.city,
+COUNT (customer_id) AS number_of_customers
+FROM customer A
+INNER JOIN address B ON A.address_id = B.address_id
+INNER JOIN city C ON B.city_id = C.city_id
+INNER JOIN country D ON C.country_id = D.country_id
+WHERE D.Country IN ('India', 'China', 'United States', 'Japan', 'Mexico', 'Brazil', 'Russian Federation', 'Philippines', 'Turkey', 'Indonesia')
+GROUP BY country, city
+ORDER BY number_of_customers DESC
+Limit 10
+);
+
+# SQL query to find the top 5 customers who have spent the most money in each of the top 10 cities identified.
+
+SELECT A.customer_id, A.first_name,
+A.last_name,
+C.city,
+D.country,
+Sum (E. amount) AS total amount paid.
+From customer A
+INNER JOIN address B ON A.address_id = B. address_id
+INNER JOIN city C ON B.city_id = c.city_id
+INNER JOIN country D ON C.country_id = 0.country_id
+INNER JOIN payment E ON A.customer_id=E.customer_id
+WHERE C.city IN ('Aurora', 'So Leopoldo', 'Tianjin, 'Shanwei', 'Citrus Heights', 'Teboksary', 'Iwaki', 'Ambattur', 'cianjur', 'Acua')
+GROUP BY A.customer_id,
+A. first_name,
+A.Last_name,
+C.city,
+D.country
+ORDER BY total amount paid DESC
+LIMIT 5
