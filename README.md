@@ -7,11 +7,11 @@ Rockbuster Stealth LLC, a global movie rental company, used to operate physical 
 
 **Key Questions:**
 
-Which movies are pivotal for revenue?
-Average rental duration for videos?
-Demographics of Rockbuster customers?
-Location of high-value customers?
-Sales comparison across regions.
+-Which movies are pivotal for revenue?
+-Average rental duration for videos?
+-Demographics of Rockbuster customers?
+-Location of high-value customers?
+-Sales comparison across regions.
 
 **Data And Tools**
 
