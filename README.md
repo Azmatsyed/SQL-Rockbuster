@@ -3,6 +3,7 @@
 A Data Driven presentation was prepared for the board of Management to address key business question. The data dictionary and SQL queries utilized to derive the answers were provided to the technical team.
 
 **Introduction**
+
 Rockbuster Stealth LLC, a global movie rental company, used to operate physical stores worldwide. However, with increasing competition from streaming services like Netflix and Amazon Prime, Rockbuster Stealth's management is now planning to launch an online video rental service using its existing movie licenses to remain competitive in the market.
 
 **Key Questions:**
